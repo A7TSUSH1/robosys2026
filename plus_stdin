@@ -1,0 +1,8 @@
+#!/usr/bin/python3
+import sys
+
+x = 0.0
+for line in sys.stdin:      #plus_bのsys.argv[1:]をsys.stdinに変えただけ
+    x += float(line)        #floatは前後の改行や空白を無視するのでstrip不要
+
+print(x)
