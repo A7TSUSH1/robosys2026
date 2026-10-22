@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+#SPDX-FileCopyrightText: 2026 Taro Suzuki
+
+
 import sys
 #本来は関数の前後に空行を2行あける（スライドの都合で省略）
 def tonum(s):   #def 関数の名前(引数)で関数を定義
