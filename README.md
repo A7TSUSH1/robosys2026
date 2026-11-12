@@ -1,15 +1,13 @@
-# plusコマンド
-![test](https://github.com/A7TSUSH1/robosys2026/actions/workflows/test.yml/badge.svg)
+# stat_calc コマンド
 
-標準入力から読み込んだ数字を足す。
+[![test](https://github.com/A7TSUSH1/robosys2026/actions/workflows/test.yml/badge.svg)](https://github.com/A7TSUSH1/robosys2026/actions/workflows/test.yml)
 
-## 必要なソフトウェア
-- Python
-  - テスト済みバージョン: 3.10〜3.14
+標準入力から受け取った複数の数値データの基本的な統計情報（データ数、平均値、最小値、最大値、分散、標準偏差）を計算し、標準出力に出力するコマンドです。パイプラインに組み込んで、ログデータや計測データなどの分析を行う際に利用できます。
 
-## テスト環境
-- Ubuntu 24.04 LTS
+## 使い方
 
-## ライセンス
-- このソフトウェアパッケージは、3条項BSDライセンスの下、再頒布および使用が許可されます。
-- © 2026 Atsushi
+リポジトリをクローンし、コマンドを実行します。
+
+```bash
+$ git clone [https://github.com/A7TSUSH1/robosys2026.git](https://github.com/A7TSUSH1/robosys2026.git)
+$cd robosys2026$ chmod +x stat_calc
