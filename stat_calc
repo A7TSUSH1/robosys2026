@@ -1,0 +1,54 @@
+#!/usr/bin/python3
+# SPDX-FileCopyrightText: 2026 Atsushi
+# SPDX-License-Identifier: BSD-3-Clause
+
+import sys
+import math
+
+def calculate_stats(numbers):
+    if not numbers:
+        return None
+
+    n = len(numbers)
+    mean = sum(numbers) / n
+    variance = sum((x - mean) ** 2 for x in numbers) / n
+    std_dev = math.sqrt(variance)
+    min_val = min(numbers)
+    max_val = max(numbers)
+
+    return {
+        "count": n,
+        "mean": mean,
+        "variance": variance,
+        "std_dev": std_dev,
+        "min": min_val,
+        "max": max_val
+    }
+
+def main():
+    numbers = []
+    for line in sys.stdin:
+        line = line.strip()
+        if not line:
+            continue
+        try:
+            numbers.append(float(line))
+        except ValueError:
+            print(f"Error: Invalid input '{line}'. Please provide numbers.", file=sys.stderr)
+            sys.exit(1)
+
+    if not numbers:
+        sys.exit(1)
+
+    stats = calculate_stats(numbers)
+
+    # ほかのコマンドに渡せるように、標準出力には結果だけをシンプルな形式で出力
+    print(f"Count: {stats['count']}")
+    print(f"Mean: {stats['mean']:.4f}")
+    print(f"Min: {stats['min']}")
+    print(f"Max: {stats['max']}")
+    print(f"Variance: {stats['variance']:.4f}")
+    print(f"StdDev: {stats['std_dev']:.4f}")
+
+if __name__ == "__main__":
+    main()
