@@ -9,7 +9,7 @@
 リポジトリをクローンして実行権限を付与します。
 
 ```bash
-$ git clone [https://github.com/A7TSUSH1/robosys2026.git](https://github.com/A7TSUSH1/robosys2026.git)
+$ git clone https://github.com/A7TSUSH1/robosys2026.git
 $ cd robosys2026
 $ chmod +x stat_calc
 ```
